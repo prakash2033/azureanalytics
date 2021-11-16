@@ -1,0 +1,251 @@
+/* Add your variable customizations of layout here */
+@import '../overrides/_theme_light_variables';
+
+/* Main colour scheme */
+$primaryColor: $grey300;
+$primaryBg: $white;
+$secondaryBg: $grey500;
+$primaryTextColor: $grey100;
+$secondaryTextColor: $grey200;
+$contrastTextColor: $white;
+
+$highlightColor: $accentBlue;
+$bodyBgColor: $white;
+
+$discrete-itemColor: $grey200;
+$contentGroupBorderColor: $grey300;
+$focusOutlineColor: $accentBlue;
+$focusOutlineShadow: 0 0 2px 1px $accentBlue;
+
+/* Layout colour scheme - bars and menus */
+$topbarBg: $primaryBg;
+$topbarTextColor: $discrete-itemColor;
+$topbarBorderColor: transparent;
+
+$toolbarBg: $secondaryBg;
+$toolbarTextColor: $discrete-itemColor;
+$toolbarBorderColor: transparent;
+$toolbarShadow: 0 0 0px 1px $grey500;
+
+$menuBg: $secondaryBg;
+$menuitemTextColor: $discrete-itemColor;
+$menuitemActiveBg: lighten($menuBg, 0.8%);
+$menuitemActiveTextColor: $primaryTextColor;
+$menuitemActiveBorderColor: $primaryBlue;
+
+/* Layout colour scheme - layout items */
+$layoutItemHoverBg: $grey400;
+$layoutItemHoverTextColor: $primaryTextColor;
+$topbarMenuItemBorder: 0.5px solid $grey400;
+$breadcrumbHoverTextColor: $accentBlue;
+
+/* Layout colour scheme - overlay */
+$overlayBg: $primaryBg;
+$overlayTextColor: $primaryTextColor;
+
+/* Overlay form colour scheme */
+$overlay-formBg: $primaryBg;
+$overlay-formBorderColor: $primaryBg;
+$overlay-formHeaderBg: $dimBlue;
+$overlay-formHeaderBorderColor: transparent;
+$overlay-formClassificationTextColor: $grey500;
+$overlay-formCloseIconColor: $grey500;
+$overlay-formCloseIconSelectColor: $white;
+$overlay-formCloseIconHoverBg: $grey100;
+$overlay-formCloseIconHoverOpacity: .1;
+
+/* Alerts colour scheme */
+$alert-info: $primaryBlue;
+$alert-infoShadow: none;
+$alert-infoFocusBg: $grey400;
+$alert-infoFocusShadow: 0 2px 5px -1px $grey400;
+$alert-infoSelect: $white;
+$alert-infoSelectBg: $primaryBlue;
+$alert-infoSelectShadow: 0 0 3px 1px $primaryBlue;
+$alert-error: $red;
+$alert-errorShadow: none;
+$alert-errorFocusBg: $transparentRed;
+$alert-errorFocusShadow: 0 2px 5px -1px $transparentRed;
+$alert-errorSelect: $white;
+$alert-errorSelectBg: $red;
+$alert-errorSelectShadow: 0 0 3px 1px $red;
+$alert-success: $green;
+$alert-successShadow: none;
+$alert-successFocusBg: $transparentGreen;
+$alert-successFocusShadow: 0 2px 5px -1px $transparentGreen;
+$alert-successSelect: $white;
+$alert-successSelectBg: $green;
+$alert-successSelectShadow: 0 0 3px 1px $green;
+$alert-warning: $orange;
+$alert-warningShadow: none;
+$alert-warningFocusBg: $transparentOrange;
+$alert-warningFocusShadow: 0 2px 5px -1px $transparentOrange;
+$alert-warningSelect: $white;
+$alert-warningSelectBg: $orange;
+$alert-warningSelectShadow: 0 0 3px 1px $orange;
+
+/* Button colour scheme */
+$buttonRippleBg: $grey300;
+$primaryButtonBg: $primaryBlue;
+$primaryButtonTextColor: $white;
+$primaryButtonBorderColor: $primaryBg;
+$primaryButtonShadow: none;
+$primaryButtonHoverBg: darken($primaryBlue,10%);
+$primaryButtonHoverTextColor: $white;
+$primaryButtonHoverBorderColor: $primaryBg;
+$primaryButtonHoverShadow: none;
+$primaryButtonSelectBg: darken($primaryBlue,10%);
+$primaryButtonSelectTextColor: $white;
+$primaryButtonSelectBorderColor: $primaryBg;
+$primaryButtonSelectShadow: 0 0 3px 1px darken($primaryBlue,10%);
+$primaryButtonDisabledBg: $grey300;
+$primaryButtonDisabledColor: $grey200;
+$primaryButtonDisabledShadow: none;
+$secondaryButtonBg: inherit;
+$secondaryButtonTextColor: $accentBlue;
+$secondaryButtonBorderColor: $accentBlue;
+$secondaryButtonShadow: none;
+$secondaryButtonHoverBg: $primaryBlue;
+$secondaryButtonHoverBorderColor: inherit;
+$secondaryButtonHoverTextColor: $white;
+$secondaryButtonHoverShadow: none;
+$secondaryButtonSelectBg: $primaryBlue;
+$secondaryButtonSelectBorderColor: inherit;
+$secondaryButtonSelectTextColor: $white;
+$secondaryButtonSelectShadow: 0 0 3px 1px $primaryBlue;
+$secondaryButtonDisabledBg: inherit;
+$secondaryButtonDisabledColor: $grey200;
+$secondaryButtonDisabledShadow: none;
+$standaloneLinkBg: inherit;
+
+/* Select ui button color scheme */
+$selectButtonBg: $white;
+$selectButtonTextColor: $primaryBlue;
+$selectButtonBorderColor: $primaryBlue;
+$selectButtonHoverBg: $primaryBlue;
+$selectButtonHoverTextColor: $white;
+$selectButtonHoverShadow: 0 2px 5px -1px $grey300;
+$selectButtonFocusBg: darken($selectButtonHoverBg,10%);
+$selectButtonFocusTextColor: $white;
+$selectButtonPressBg: $primaryBlue;
+$selectButtonPressTextColor: $white;
+$selectButtonPressShadow: none;
+
+/* Table and lists colour scheme */
+$tableHeaderBg: inherit;
+$tableHeaderTextColor: $discrete-itemColor;
+$tableBodyBg: inherit;
+$tableContentTextColor: $primaryTextColor;
+$tableRowHighlightColor: $lightBlue;
+$tableDividerBorderColor: darken($secondaryBg, 3%);
+$tableHeaderBg: #f5f5f5;
+$tableHeaderTextColor: black;
+$tableBodyBg: ag-derived(background-color);
+
+$listItemHoverBg: $grey400;
+$listItemSelectBg: $dimBlue;
+$listItemHoverTextColor: $primaryTextColor;
+
+/* Link colour scheme */
+$linkColor: $accentBlue;
+$infoLinkColor: $discrete-itemColor;
+$linkHoverColor: $primaryTextColor;
+
+/* Tooltip colour scheme */
+$tooltipBg: $grey200;
+$tooltipTextColor: $contrastTextColor;
+
+/* Input form colour scheme */
+$inputBgColor: $primaryBg;
+$input-groupHeaderTextColor: $grey200;
+$input-fieldBorder: 1px solid $grey300;
+$input-fieldHoverColor: $accentBlue;
+$input-fieldFocusColor: $accentBlue;
+
+$input-dropdownPanelBorder: 0.5px solid $grey400;
+
+/* Content wrapper colour scheme */
+$inputWrapperBg: $grey400;
+$inputWrapperBorderColor: transparent;
+$inputWrapperShadow: 0 3px 1px -2px $grey300;
+
+/* Tabview colour scheme */
+$tabviewBg: transparent;
+$tabInactiveBg: inherit;
+$tabviewNavActiveBg: $tabviewBg;
+$tabviewBorderColor: $grey400;
+$tabviewHoverBg: inherit;
+$tabSelectColor: $accentBlue;
+
+/* Configuration Parameter and Values form colour scheme */
+$cp-cpvHeaderColor: $deepBlue;
+$cp-cpvBreadcrumbColor: $deepBlue;
+
+/* Label chips styling variables */
+$label-chipBg: $grey500;
+$label-chipTextColor: $grey100;
+
+/* Inline messages colour scheme */
+$inline-infoBgColor: transparent;
+$inline-errorBgColor: transparent;
+$inline-successBgColor: transparent;
+$inline-warnBgColor: $primaryBg;
+$inline-border: 0 none;
+
+/* Banner messages colour scheme */
+$banner-infoBg: $grey500;
+$banner-infoBorder: 0 none;
+$banner-infoTextColor: $grey200;
+$banner-errorBg: $primaryBg;
+$banner-errorBorder: 1px solid $red;
+$banner-errorTextColor: $red;
+$banner-successBg: $primaryBg;
+$banner-successBorder: 1px solid $green;
+$banner-successTextColor: $green;
+$banner-warnBg: $primaryBg;
+$banner-warnBorder: 1px solid $orange;
+$banner-warnTextColor: $orange;
+$banner-shadow: none;
+
+/* Toast messages colour scheme */
+$toast-infoBg: $primaryBg;
+$toast-infoBorder: 1px solid $grey200;
+$toast-infoTextColor: $grey200;
+$toast-successBg: $primaryBg;
+$toast-successBorder: 1px solid $green;
+$toast-successTextColor: $green;
+$toast-warnBg: $primaryBg;
+$toast-warnBorder: 1px solid $orange;
+$toast-warnTextColor: $orange;
+$toast-errorBg: $primaryBg;
+$toast-errorBorder: 1px solid $red;
+$toast-errorTextColor: $red;
+$toast-shadow: 0 2px 6px -1px $grey200;
+
+/* Card colour scheme */
+$card-headerBgColor: #D9DFD2;
+$card-bodyBgColor: $primaryBg;
+$card-bodyBorder: 1px solid #D9DFD2;
+$card-headerTextColor: $primaryTextColor;
+$card-headerBorderTop: none;
+$card-headerBorderRight: none;
+$card-headerBorderBottom: 1.5px solid #A4AE9B;
+$card-headerBorderLeft: 20px solid #A4AE9B;
+$card-classificationTextColor: $grey200;
+$cardShadow: 0px 0px 4px -1px  #A4AE9B;
+
+$work-areaIconColor: #A4AE9B;
+
+/* Panels colour scheme */
+$panel-headerBg: $primaryBg;
+$panel-headerTextColor: $secondaryTextColor;
+$panel-headerHoverBg: $primaryBlue;
+$panel-headerHoverTextColor: $grey200;
+$panel-headerFocusBg: $grey400;
+$panel-headerFocusTextColor: $secondaryTextColor;
+$panel-headerBorder: 1px solid $grey300;
+$panel-headerHoverBorder: 1px solid transparent;
+$panel-headerFocusBorder: 1px solid transparent;
+$panel-bodyBorder: 1px solid $grey400;
+$panel-bottomBorder: 0px;
+$panel-topBorder: 0px;

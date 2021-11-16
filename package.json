@@ -6,11 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "sasswatch": "sass ./src/assets/ --watch --no-source-map",
+    "sasscompile": "sass ./src/assets/ --no-source-map "
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~12.2.0",
+    "@angular/animations": "^12.2.13",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
@@ -18,7 +20,10 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "primeicons": "^5.0.0",
+    "primeng": "^13.0.0-rc.2",
     "rxjs": "~6.6.0",
+    "sass": "^1.43.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

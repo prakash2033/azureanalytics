@@ -1,0 +1,384 @@
+/* Add your customizations of layout here */
+body {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    .layout-wrapper {
+      position: relative;
+      // flex: none
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      // border: 2px solid yellowgreen;
+
+      .topbar {
+        position: relative;
+        flex: none;
+        height: 50px;
+        background-color: $topbarBg;
+        color: $topbarTextColor;
+        border-bottom: $topbarBorderThickness solid $topbarBorderColor;
+        @include shadow(none);
+
+        #menu-button {
+          display: none;
+          // vertical-align: top;
+          height: 50px;
+          width: 50px;
+          line-height: 50px;
+          text-align: center;
+          margin-top: -10px;
+          margin-left: 0px;
+          @include transition(background-color $transitionDuration);
+
+          i {
+            font-size: 28px;
+            line-height: inherit;
+          }
+
+          &:hover {
+            background-color: lighten($primaryColor, 10%);
+          }
+        }
+
+        .topbar-search {
+            input {
+                border:$input-fieldBorder;
+                background: lighten($inputBgColor, 10%);
+                color: $primaryTextColor;
+            }
+        }
+
+        .topbar-name {
+          font-family: "VolvoNovum", "Calibri", "Source Sans Pro";
+          color: $topbarTextColor;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.1em;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+
+        .logo {
+          height: 10px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .profile {
+            .username {
+                color: $secondaryTextColor;
+            }
+        }
+
+        .topbar-menu {
+          background-color: $overlayBg;
+          color: $overlayTextColor;
+          min-height: 500px;
+          border-top: none;
+          @include overlay-shadow;
+          @include border-radius-bottom($borderRadius);
+
+          > li {
+            a {
+              padding: 14px 6px;
+              margin: auto;
+              width: 90%;
+              border-bottom: $topbarMenuItemBorder;
+
+              &:hover {
+                background-color: $layoutItemHoverBg;
+              }
+            }
+            div {
+              padding: 14px 6px;
+              margin: auto;
+              width: 90%;
+              border-bottom: $topbarMenuItemBorder;
+            }
+          }
+        }
+      }
+
+      &.layout-overlay,
+      &.layout-static {
+        .topbar {
+          @include no-shadow;
+        }
+
+        .layout-menu-container {
+          top: 100px;
+          .layout-menu {
+            li {
+              a {
+                > span {
+                  margin-left: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.layout-slim {
+        .topbar {
+          @include no-shadow;
+        }
+
+        .layout-menu-container {
+          top: 100px;
+          .layout-menu > li > ul {
+            left: 56px;
+          }
+        }
+      }
+
+      .layout-menu-container {
+        background-color: $menuBg;
+        font-family: "VolvoNovum", "Calibri", "Source Sans Pro";
+        @include no-shadow;
+
+        .layout-menu {
+          li {
+            > a {
+              &.active-menuitem-routerlink {
+                background-color: $menuitemActiveBg;
+                color: $menuitemActiveTextColor;
+                font-weight: 400;
+              }
+
+              &.active-menuitem-routerlink:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 0px;
+                height: 46px;
+                top: 0;
+                background-color: $menuitemActiveBorderColor;
+              }
+            }
+          }
+
+          .layout-menu-tooltip {
+            display: none; // removed tooltip for now
+            top: 50%;
+            transform: translate(0, -50%);
+
+            .layout-menu-tooltip-text {
+              background-color: $tooltipBg;
+              font-weight: 400;
+              color: $tooltipTextColor;
+              padding: 8px 8px;
+            }
+
+            .layout-menu-tooltip-arrow {
+              display: none; // removed tooltip for now
+              border-right-color: $tooltipBg;
+            }
+          }
+        }
+      }
+
+      /**************************************************************************
+       * New CoMo Toolbar
+       **************************************************************************/
+      .ui-toolbar.como-toolbar {
+        flex: none;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;  /* centered vertically */
+        height: 50px;
+        background-color: $toolbarBg;
+        background-color: #fff;
+        // border-bottom: $toolbarBorderThickness solid $toolbarBorderColor;
+        padding-left: 0px; /* left-aligned with topbar app label */
+        padding-right: 0;
+        border-bottom: .5px solid #ebebeb;
+        z-index: 102;
+        @include shadow($toolbarShadow);
+
+        app-menu-button {
+          flex: none;
+          justify-self: flex-start;
+        }
+        app-breadcrumb {
+          flex: 1;
+          justify-self: self-start;
+        }
+        app-work-area-selection {
+          flex: none;
+          width: 490px;
+          justify-self: flex-end;
+          // display: flex;
+          // flex-direction: row;
+          // flex-wrap: nowrap;
+        }
+
+        // .ui-toolbar-group-left {
+        //   flex: 1;
+        //   display: flex;
+        //   flex-direction: row;
+        //   flex-wrap: nowrap;
+        //   align-items: center;  /* centered vertically */
+        //   app-menu-button {
+        //     flex: none;
+        //   }
+        //   app-breadcrumb {
+        //     flex: 1;
+        //   }
+        // }
+        // .ui-toolbar-group-right {
+        //   flex: none;
+        //   width: auto;
+        //   display: flex;
+        //   flex-direction: row;
+        //   flex-wrap: nowrap;
+        //   align-items: center;
+        //   padding-right: 8px;
+        //   app-work-area-selection {
+        //     flex: none;
+        //     margin: auto 0;
+        //   }
+        // }
+      }
+
+      app-disclaimer {
+        flex: none;
+      }
+
+      .layout-content {
+        position: relative;
+        flex: 1;
+        overflow-y: auto;
+        // border: 1px solid orange;
+
+        // PrimeNG Menubar doesn't work with this class!
+        .layout-breadcrumb {
+          background-color: $toolbarBg;
+          border-bottom: $toolbarBorderThickness solid $toolbarBorderColor;
+          min-height: 34px;
+          padding: 0px 6px;
+          @include shadow($toolbarShadow);
+
+          // Override to fit the new Work Area selection component
+          &.with-work-area-selection {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;  /* centered vertically */
+            height: 50px;
+            padding-left: 16px; /* left-aligned with topbar app label */
+            padding-right: 0;
+            background-color: #fff;
+            border: .5px solid #ebebeb;
+          }
+
+          ul {
+            margin: 6px 0 0 0;
+            color: $toolbarTextColor;
+            padding: 0 0 0 6px;
+            font-weight: 300;
+            li {
+              margin-left: 10px;
+              color: $toolbarTextColor;
+              a {
+                color: $toolbarTextColor;
+                &:hover {
+                  color: $breadcrumbHoverTextColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .layout-wrapper {
+        &.layout-overlay,
+        &.layout-static {
+          .layout-menu-container {
+            z-index: 103; // above the main toolbar
+            .layout-menu {
+              margin-top: -8px;
+
+              li {
+                a {
+                  text-align: left;
+                  padding: 12px 0px;
+
+                  i:first-child {
+                    padding-left: 16px;
+                    padding-right: 12px;
+                    font-size: 22px;
+                  }
+
+                  &:hover {
+                    background-color: $layoutItemHoverBg;
+                    color: $layoutItemHoverTextColor;
+                  }
+
+                  &:focus {
+                    background-color: $menuBg;
+                    color: $layoutItemHoverTextColor;
+                  }
+
+                  &:focus:hover {
+                    background-color: $layoutItemHoverBg;
+                    color: $layoutItemHoverTextColor;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.layout-slim {
+          .layout-content {
+            margin-left: 56px;
+          }
+
+          .layout-menu-container {
+            width: 56px;
+            .layout-menu {
+              padding: 0 0 0 0;
+              > li {
+                > a {
+                  text-align: left;
+                  padding-top: 12px;
+                  padding-bottom: 12px;
+
+                  i:first-child {
+                    padding-left: 16px;
+                    font-size: 22px;
+                  }
+
+                  &:hover {
+                    background-color: $layoutItemHoverBg;
+                    color: $layoutItemHoverTextColor;
+                  }
+
+                  &:focus {
+                    background-color: $menuBg;
+                    color: $layoutItemHoverTextColor;
+                  }
+
+                  &:focus:hover {
+                    background-color: $layoutItemHoverBg;
+                    color: $layoutItemHoverTextColor;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

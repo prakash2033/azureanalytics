@@ -1,0 +1,165 @@
+/* Add your variable customizations of theme here */
+/* Font styling variables */
+$fontFamily: "Calibri", "Source Sans Pro", Arial, sans-serif;
+$fontSize: 14px;
+$fontSmall: 12px;
+$fontLarge: 18px;
+$textNormal: 400;
+$textBold: 500;
+$textLight: 300;
+
+/* Pre-defined colour palette */
+$primaryBlue: #00f06c;
+$accentBlue: #1c6bba;
+$dimBlue: rgb(143, 158, 181);
+$deepBlue: darken(#3d5881, 5%);
+$lightBlue: #ccd3db;
+
+$primaryOrange: #EFDDC4;
+$darkOrange: #D9B48B;
+
+$grey100: #141414;
+$grey200: #707070;
+$grey300: #d5d5d5;
+$grey400: #ebebeb;
+$grey500: #fafafa;
+$white: #ffffff;
+
+$red: #bf2012;
+$transparentRed: rgba(191, 32, 18, .15);
+$lightRed: lighten($red, 20%);
+$orange: #bf834b;
+$transparentOrange: rgba(191, 131, 75, .2);
+$lightOrange: lighten($orange, 20%);
+$green: #68875c;
+$transparentGreen: rgba(104, 135, 92, .2);
+$lightGreen: #99cc33;
+
+/* General styling variables */
+$borderRadius: 2px;
+$transitionDuration: 0.3s;
+$animationDuration: 1.2s;
+$contentPadding: 12px 16px 12px 16px;
+$contentGroupBorder: 0.5px solid;
+$focusOutline: 0 none;
+$headerPadding: 10px 16px 10px 16px;
+
+/* Layout styling variables */
+$topbarBorderThickness: 0.5px;
+$toolbarBorderThickness: 0.5px;
+$layoutBorderThickness: 0.5px;
+
+/* Overlay form styling variables */
+$overlay-formBorder: 0 none;
+$overlay-formBorderRadius: 0;
+$overlay-formPadding: 0;
+
+$overlay-formHeaderBorderTop: 0 none;
+$overlay-formHeaderBorderRight: 0 none;
+$overlay-formHeaderBorderBottom: 0 none;
+$overlay-formHeaderBorderLeft: 20px solid;
+
+$overlay-formBreadcrumbFontSize: $fontLarge;
+$overlay-formBreadcrumbFontWeight: $textLight;
+$overlay-formBreadcrumbTextTransform: none;
+$overlay-formBreadcrumbIconSize: $fontSmall;
+$overlay-formBreadcrumbIconPadding: 0 8px;
+$overlay-formCloseIconSize: $fontLarge;
+$overlay-formCloseIconHoverBgSize: 28px;
+$overlay-formContentGroupPadding: 0 0 7px 0;
+$overlay-formContentGroupMargin: 7px;
+$overlay-formFooterHeight: 46px;
+
+/* Form (overlays, cards, etc) styling variables */
+$headerFontSize: $fontLarge;
+$headerFontWeight: $textBold;
+$headerTextTransform: none;
+$headerLetterSpacing: 0.1em;
+$header-classificationFontSize: $fontSmall;
+$header-classificationFontWeight: $textLight;
+$header-classificationFontTransform: uppercase;
+
+/* Button styling variables */
+$buttonBorderRadius: 4px;
+$buttonMargin: 16px;
+$buttonsMarginEdge: 16px;
+$button2buttonMarginLarge: 16px;
+$button2buttonMarginSmall: 4px;
+$buttonFontSize: $fontSize;
+$buttonFontWeight: $textBold;
+$buttonLetterSpacing: 0.1em;
+$buttonBorder: 1.1px solid;
+$buttonHeight: 48px;
+$standaloneLinkHeight: 32px;
+$buttonLeftRightPadding: 36px;
+
+/* Inputswitch  styling variables */
+$input-switchHeight: 28px;
+$input-switchWidth: 46px;
+$input-switchSliderHeight: 24px;
+
+/* Table and lists styling variables */
+//$tableHeaderFontSize: $fontSmall;
+$tableHeaderFontSize: $fontSize;
+$tableHeaderFontWeight: $textBold;
+$tableHeaderLetterSpacing: $headerLetterSpacing;
+$tableContentFontWeight: $textLight;
+$listItemHoverFontWeight: 700;
+// $tableHeaderBg: #1b3548;
+// $tableHeaderTextColor: #d8d8d8;
+$datableEvenRowBgColor: ag-derived(background-color);
+
+$listItemPadding: 12px 16px 12px 16px;
+
+/* Link styling variables */
+$linkFontSize: $fontSize;
+$infoLinkFontSize: $fontSmall;
+$linkHoverTextDecoration: none;
+
+/* Input form styling variables */
+$input-groupHeaderFontSize: $fontSmall;
+$input-groupHeaderFontWeight: $textLight;
+$input-groupHeaderPaddingBottom: 0px;
+$input-fieldBorderRadius: 4px;
+
+/* Tabview styling variables */
+$tabPadding: 0 10px;
+$tabLabelPadding: 8px 16px 8px 16px;
+$tabLabelFontSize: $fontSize;
+$tabLabelFontWeight: $textLight;
+$tabLabelLetterSpacing: $headerLetterSpacing;
+$tabSelectMargin: 0;
+$tabSelectThickness: 3px;
+$tabSelectFontWeight: $textBold;
+$tabSelectWidth: 75%;
+
+/* Label chips styling variables */
+$label-chipPadding: 2px 4px 2px 14px;
+$label-chipMargin: 2px 6px 2px 0;
+$label-chipFontSize: $fontSize;
+$label-chipFontWeight: $textLight;
+
+/* Inline messages styling variables */
+$inline-padding: 2px 2px;
+$inline-margin: 0px 0px;
+$inline-borderRadius: 0px;
+$inline-iconDisplay: none;
+$inline-fontSize: $fontSmall;
+$inline-iconFontSize: 10px;
+
+/* Banner and toast message styling variables */
+$banner-padding: 8px 60px 8px 20px;
+$banner-margin: 0px;
+$banner-borderRadius: 2px;
+$toast-padding: 6px 24px;
+$toast-margin: 0 0 12px 0;
+$toast-borderRadius: 30px;
+$message-iconFontSize: 18px;
+$message-closeIconFontSize: 16px;
+
+/* Card styling variables */
+$card-headerPadding: 8px 12px;
+$card-bodyPadding: 8px 0px 8px 0px;
+
+$font-family-awesome: 'Font Awesome 5 Pro';
+
